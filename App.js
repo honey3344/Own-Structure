@@ -2,7 +2,6 @@ import React, { createContext, useState,useEffect } from 'react';
 import { Button, View, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator, TransitionPresets, defaultScreenOptions, GestureHandlerRefContext } from '@react-navigation/stack';
-// import Authstack from './Src/View/Stack/Authstack';
 import Authstack from './Src/View/Stack/Authstack'
 import Splash from './Src/View/Splash/Splash';
 import { navigationRef } from './Src/Components/Config';

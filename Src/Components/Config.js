@@ -9,27 +9,16 @@ export function navigate(name, params) {
   }
 }
 
-export const Setroot=(name,params)=>{
-    if (navigationRef.isReady()) {
-        navigationRef.reset({
-            index: 0,
-            routes: [{ name: name }],
-          });
-      }
+export const Setroot = (name, params) => {
+  if (navigationRef.isReady()) {
+    navigationRef.reset({
+      index: 0,
+      routes: [{ name: name }],
+    });
+  }
 }
 
-export const Colors={
-  Theme:"green",
-  Default:"black"
+export const Colors = {
+  Theme: "green",
+  Default: "black"
 }
-// navigation.reset({
-//           index: 0,
-//           routes: [{ name: 'Login' }],
-//         });
-// import { useNavigation } from "@react-navigation/native"
-// const Navigate =(name)=>{
-//     const {navigate} = useNavigation();
-//     navigate(name)
-// }
-
-// export {Navigate}

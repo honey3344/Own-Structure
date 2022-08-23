@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import MyText from '../../Components/Ctext';
 // import { Navigate } from '../../Components/Config';
 import { navigate, Setroot } from '../../Components/Config';
@@ -9,13 +9,23 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 export default function Splash({ navigation }) {
 
-  const { loader ,setLoader} = useContext(Context);
+  const { loader, setLoader, Routrequest } = useContext(Context);
   const { t, i18n } = useTranslation()
+  useEffect(() => {
+    // setLoader(true)
+    Routrequest.Login((e)=>{
+      // setLoader(false)
+      console.log(e,'here is the data========>')
+      // setLoader(false)
+    })
+  
+  },[])
+
+
   return (
     <View style={{ flex: 1, backgroundColor: 'red' }}>
       <TouchableOpacity style={{ height: 50, backgroundColor: "blue", marginTop: 50 }} onPress={() => {
-        // i18n.changeLanguage('kn')
-        // navigate("Authstack")
+
         setLoader(true)
       }}></TouchableOpacity>
       <MyText green title={t("Welcometext")} h1 />
